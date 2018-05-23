@@ -31,8 +31,10 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'Townk/vim-autoclose'
 Plugin 'scrooloose/syntastic'
+Plugin 'ntpeters/vim-better-whitespace'
 
 Plugin 'gavinbeatty/dragvisuals.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'joshdick/onedark.vim' 
 Plugin 'kien/ctrlp.vim'
@@ -51,6 +53,7 @@ set tabstop=2
 set expandtab
 set shiftwidth=2
 set number
+set ignorecase
 
 highlight ColorColumn ctermbg=DarkGray
 set colorcolumn=80
@@ -85,4 +88,10 @@ vmap yhp yoyhp<Esc>p
 
 nmap cll yiwocll<Esc>p
 nmap clx yiwoclx<Esc>p  
-nmap yhp yiwoyhp<Esc>p  
+nmap yhp yiwoyhp<Esc>p
+
+vmap '' c''<Esc>P
+vmap "" c""<Esc>P
+vmap (( c()<Esc>P
+vmap [[ c[]<Esc>P
+vmap {{ c{}<Esc>P
