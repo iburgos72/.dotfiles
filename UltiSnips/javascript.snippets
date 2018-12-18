@@ -1,0 +1,51 @@
+snippet "reactcc (\w+)" "react class component" r
+import React, { Component } from 'react';
+
+class `!p snip.rv = match.group(1)` extends Component {
+	render() {
+		return (
+			<div>
+				Hello
+			</div>
+		);
+	}
+}
+
+export default `!p snip.rv = match.group(1)`;
+endsnippet
+
+snippet "reactfc (\w+)" "react functional component" r
+import React from 'react';
+
+const `!p snip.rv = match.group(1)` = props => {
+	return (
+		<div>
+			Hello
+		</div>
+	);
+}
+
+`!p snip.rv = match.group(1)`.defaultProps = {
+	$1
+};
+
+export default `!p snip.rv = match.group(1)`
+endsnippet
+
+snippet constr "react constructor"
+constructor(props) {
+	super(props);
+	this.state = {$1}
+}
+endsnippet
+
+snippet stateProps "function for map actions to props"
+const mapStateToProps = (state) => {
+	const { $1 } = state;
+	return { $1 };
+}
+endsnippet
+
+snippet actionsProps "function for map actions to props"
+const mapActionsToProps = {$1}
+endsnippet

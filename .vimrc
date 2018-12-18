@@ -6,6 +6,10 @@ call vundle#begin()
 " Vungle
 Plugin 'VundleVim/Vundle.vim'
 
+" Snippets
+Plugin 'Sirver/ultisnips'
+Plugin 'honza/vim-snippets'
+
 " JS
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -19,12 +23,14 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'hdima/python-syntax'
 
 " HTML and CSS
-Plugin 'mattn/emmet-vim' 
+Plugin 'svg.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'chrisbra/Colorizer'
+Plugin  'ap/vim-css-color'
 
 " NeerdTree
 Plugin 'scrooloose/nerdtree'
-Plugin 'xuyuanp/nerdtree-git-plugin' 
+Plugin 'xuyuanp/nerdtree-git-plugin'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -34,9 +40,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ntpeters/vim-better-whitespace'
 
 Plugin 'gavinbeatty/dragvisuals.vim'
-Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'joshdick/onedark.vim' 
+Plugin 'joshdick/onedark.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
@@ -47,7 +52,7 @@ Plugin 'TeTrIs.vim'
 " :PluginInstall
 
 call vundle#end()
-filetype plugin indent on 
+filetype plugin indent on
 
 set tabstop=2
 set expandtab
@@ -78,20 +83,30 @@ let g:jsdoc_enable_es6 = 1
 let g:jsx_ext_required = 0
 let g:airline_theme='distinguished'
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+
 imap cll console.log();<Esc>hi
 imap clx IO.inspect <Esc>a
 imap yhp Yals.Helpers.pretty_log()<Esc>i
+imap ohp Kof.Repo.Utils.pretty_log()<Esc>i
 
 vmap cll yocll<Esc>p
 vmap clx yoclx<Esc>p
 vmap yhp yoyhp<Esc>p
+vmap ohp yoohp<Esc>p
 
 nmap cll yiwocll<Esc>p
-nmap clx yiwoclx<Esc>p  
+nmap clx yiwoclx<Esc>p
 nmap yhp yiwoyhp<Esc>p
+nmap ohp yiwoohp<Esc>p
 
 vmap '' c''<Esc>P
 vmap "" c""<Esc>P
+vmap `` c``<Esc>P
 vmap (( c()<Esc>P
 vmap [[ c[]<Esc>P
 vmap {{ c{}<Esc>P
