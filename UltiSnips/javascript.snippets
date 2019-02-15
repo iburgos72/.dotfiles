@@ -35,7 +35,7 @@ endsnippet
 snippet constr "react constructor"
 constructor(props) {
 	super(props);
-	this.state = {$1}
+	this.state = {$1};
 }
 endsnippet
 
@@ -47,5 +47,20 @@ const mapStateToProps = (state) => {
 endsnippet
 
 snippet actionsProps "function for map actions to props"
-const mapActionsToProps = {$1}
+const mapActionsToProps = {$1};
+endsnippet
+
+snippet testDe "function description for test"
+describe("$1", () => {
+
+  it("", () => {
+	});
+
+});
+endsnippet
+
+snippet testIt "function it for test"
+	it("", {
+	});
+
 endsnippet
