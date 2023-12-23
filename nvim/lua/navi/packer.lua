@@ -57,4 +57,7 @@ return require('packer').startup(function(use)
 	  }
   }
 
+  use 'maxmellon/vim-jsx-pretty'
+  use 'HerringtonDarkholme/yats.vim'
+
 end)
