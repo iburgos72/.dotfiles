@@ -17,7 +17,25 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'cssls', 'cssmodules_ls', 'docker_compose_language_service', 'dockerls', 'elixirls', 'eslint', 'golangci_lint_ls', 'gopls', 'html', 'jsonls', 'prismals', 'quick_lint_js', 'sqlls', 'tailwindcss', 'terraformls', 'tsserver', 'yamlls'},
+  ensure_installed = {
+    'css-lsp',
+    'docker-compose-language-service',
+    'dockerfile-language-server',
+    'elixir-ls',
+    'eslint-lsp',
+    'eslint_d',
+    'golangci-lint-langserver',
+    'gopls',
+    'html-lsp',
+    'json-lsp',
+    'prisma-language-server',
+    'sqlls',
+    'tailwindcss-language-server',
+    'terraform-ls',
+    'typescript-language-server',
+    'yaml-language-server',
+  },
+
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
