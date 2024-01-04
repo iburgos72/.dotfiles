@@ -27,13 +27,13 @@ require('mason-lspconfig').setup({
     'golangci-lint-langserver',
     'gopls',
     'html-lsp',
+    'hydra-lsp',
     'json-lsp',
     'prisma-language-server',
     'sqlls',
     'tailwindcss-language-server',
     'terraform-ls',
     'typescript-language-server',
-    'yaml-language-server',
   },
 
   handlers = {

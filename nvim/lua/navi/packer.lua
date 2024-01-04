@@ -59,5 +59,6 @@ return require('packer').startup(function(use)
 
   use 'maxmellon/vim-jsx-pretty'
   use 'HerringtonDarkholme/yats.vim'
+  use 'github/copilot.vim'
 
 end)
