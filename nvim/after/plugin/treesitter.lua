@@ -47,5 +47,5 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = { "tsx", "jsx", "ts", "js" },
   },
 
-  indent = { enable = true },
+  indent = { enable = false },
 }

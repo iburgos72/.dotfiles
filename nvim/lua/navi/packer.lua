@@ -38,6 +38,11 @@ return require('packer').startup(function(use)
 	  end
   }
 
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
   use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use 'nvim-treesitter/playground'
 

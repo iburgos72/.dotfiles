@@ -6,7 +6,7 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew update && brew upgrade && brew install neovim ripgrep tmux git tig
+brew update && brew upgrade && brew install neovim ripgrep tmux git tig tmux-mem-cpu-load
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
