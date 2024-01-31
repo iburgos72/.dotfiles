@@ -39,6 +39,11 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
@@ -65,5 +70,4 @@ return require('packer').startup(function(use)
   use 'maxmellon/vim-jsx-pretty'
   use 'HerringtonDarkholme/yats.vim'
   use 'github/copilot.vim'
-
 end)

@@ -11,6 +11,7 @@ require'nvim-treesitter.configs'.setup {
 	  "graphql",
 	  "html",
 	  "http",
+    "java",
 	  "javascript",
 	  "jsdoc",
 	  "json",
