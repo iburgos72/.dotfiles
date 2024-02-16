@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Theme
   use {
 	  'rebelot/kanagawa.nvim',
 	  config = function()
@@ -38,6 +39,7 @@ return require('packer').startup(function(use)
 	  end
   }
 
+  -- Status Line
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }

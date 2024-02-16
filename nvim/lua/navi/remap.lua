@@ -22,3 +22,10 @@ vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+vim.keymap.set("n", "cll", "oconsole.log('000000',);<esc>hi")
+vim.keymap.set("v", "cll", "yoconsole.log('000000',);<esc>hP")
+
+vim.keymap.set("n", "spp", "oSystem.out.println(\"000000 \" + );<esc>hi")
+vim.keymap.set("v", "spp", "yoSystem.out.println(\"000000 \" + );<esc>hP")
+

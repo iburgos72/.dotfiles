@@ -15,29 +15,32 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-require('mason').setup({})
+require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'css-lsp',
-    'docker-compose-language-service',
-    'dockerfile-language-server',
-    'elixir-ls',
-    'eslint-lsp',
-    'eslint_d',
-    'golangci-lint-langserver',
-    'google-java-format',
+
+    'bashls',
+    'cssls',
+    'docker_compose_language_service',
+    'dockerls',
+    'elixirls',
+    'eslint',
+    -- 'eslint_d',
+    'golangci_lint_ls',
+    -- 'google-java-format',
     'gopls',
-    'html-lsp',
-    'hydra-lsp',
-    'java-debug-adapter',
-    'java-test',
+    'html',
+    'hydra_lsp',
+    -- 'java-debug-adapter',
+    -- 'java-test',
     'jdtls',
-    'json-lsp',
-    'prisma-language-server',
+    'jsonls',
+    'lua_ls',
+    'prismals',
     'sqlls',
-    'tailwindcss-language-server',
-    'terraform-ls',
-    'typescript-language-server',
+    'tailwindcss',
+    'terraformls',
+    'tsserver',
   },
 
   handlers = {
@@ -66,3 +69,10 @@ cmp.setup({
     ['<C-y>'] = cmp.mapping.complete(),
   }),
 })
+
+-- keep diagnostics on insert mode
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    update_in_insert = true,
+  }
+)

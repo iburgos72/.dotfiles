@@ -16,7 +16,8 @@ git clone https://github.com/iburgos72/.dotfiles.git ~/Documents/.dotfiles
 
 cp -r ~/Documents/.dotfiles/nvim ~/.config
 mkdir ~/.config/tmux/
-cp ~/Documents/.dotfiles/.tmux.conf ~/.config/tmux
+cp ~/Documents/.dotfiles/.tmux.conf ~/
+cp ~/Documents/.dotfiles/.p10k.zsh ~/
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
